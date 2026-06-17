@@ -1,7 +1,10 @@
-# CorDiscMods
-Howdy! the current branch you are looking at will NOT show any code, infact, this README.md is the only file you'll actually see!
+# Cor's Hardcore Additions!
+Welcome to the Hardcore Additions Branch!
 
-The WaterBailey Disc Mod has it's own Branch: WaterBailey, which will contain everything for that mod's v1.1.0 and onwards!
-The Hardcore Additions Mod uses the Hardcore_Disc branch, which has all of it's contents for that mod's v1.0.0 and onwards used in the new 1.21.1 version of that mod!
+here you will find everything used in the new v1.0.0 Hardcore Disc mod for 1.21.1!
 
-Please select either branch to see their respective code!
+this serves to ultimately merge the original disc list from the 1.21.10 Hardcore Disc mod with the features of the v1.0.6 of the old WaterBailey mod, which aiming at fixing the server-crashing bug that i had started to work on in v1.0.7
+
+This mod is currently out for it's v1.0.0 release! and i was able to use Intelij's builtin Test Server when working on this mod, and found out that nothing crashes the server!
+
+Enjoy!
