@@ -9,4 +9,3 @@ This mod is currently out for it's v1.0.0 release! and i was able to use Intelij
 
 Enjoy!
 
-SIDE NOTE: there IS one file not present in this repo that i have in my own set of files: the only podcast disc to exist.... only because github decided it was way too big (max size of 100mbs when the file is only 104mbs is bs) to be uploaded right now... so i need to figure that out
