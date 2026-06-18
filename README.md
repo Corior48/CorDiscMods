@@ -1,4 +1,4 @@
-# CorDiscMods
+# Corior's Disc Mod's Repository!
 Howdy! the current branch you are looking at will NOT show any code, infact, this README.md is the only file you'll actually see!
 
 The WaterBailey Disc Mod has it's own Branch: WaterBailey, which will contain everything for that mod's v1.1.0 and onwards!
