@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.hardcore_discs.jaka_jaan.desc"
+  },
+  "length_in_seconds": 92.00,
+  "sound_event": "hardcore_discs:jaka_jaan"
+}

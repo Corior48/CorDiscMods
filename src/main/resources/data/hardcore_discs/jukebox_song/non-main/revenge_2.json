@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.hardcore_discs.revenge_2.desc"
+  },
+  "length_in_seconds": 235.00,
+  "sound_event": "hardcore_discs:revenge_2"
+}

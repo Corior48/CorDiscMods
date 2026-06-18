@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "hardcore_discs:block/music_block"
+    }
+  }
+}

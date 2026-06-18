@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.hardcore_discs.sexy_luigi.desc"
+  },
+  "length_in_seconds": 100.00,
+  "sound_event": "hardcore_discs:sexy_luigi"
+}

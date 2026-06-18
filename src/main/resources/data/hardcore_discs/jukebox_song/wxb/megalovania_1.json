@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.hardcore_discs.megalovania_1.desc"
+  },
+  "length_in_seconds": 200.0,
+  "sound_event": "hardcore_discs:megalovania_1"
+}

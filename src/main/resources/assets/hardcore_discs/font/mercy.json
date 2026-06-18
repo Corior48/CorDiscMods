@@ -1,0 +1,11 @@
+{
+  "providers": [
+    {
+      "type": "ttf",
+      "file": "hardcore_discs:mercy.ttf",
+      "shift": [0, 0],
+      "size": 14,
+      "oversample": 2.0
+    }
+  ]
+}

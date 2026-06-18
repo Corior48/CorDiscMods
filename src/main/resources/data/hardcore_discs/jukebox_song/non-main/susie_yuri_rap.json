@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.hardcore_discs.susie_yuri_rap.desc"
+  },
+  "length_in_seconds": 270.00,
+  "sound_event": "hardcore_discs:susie_yuri_rap"
+}

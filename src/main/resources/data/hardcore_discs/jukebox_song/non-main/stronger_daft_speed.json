@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.hardcore_discs.stronger_daft_speed.desc"
+  },
+  "length_in_seconds": 193.00,
+  "sound_event": "hardcore_discs:stronger_daft_speed"
+}

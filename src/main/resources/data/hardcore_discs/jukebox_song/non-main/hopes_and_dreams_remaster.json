@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.hardcore_discs.hopes_and_dreams_remaster.desc"
+  },
+  "length_in_seconds": 402.00,
+  "sound_event": "hardcore_discs:hopes_and_dreams_remaster"
+}

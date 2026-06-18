@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_top",
+  "textures": {
+    "side": "hardcore_discs:block/music_block_side",
+    "top": "hardcore_discs:block/music_block_top",
+    "bottom": "hardcore_discs:block/music_block_side"
+  }
+}

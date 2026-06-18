@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.hardcore_discs.triple_the_threat_nongagos.desc"
+  },
+  "length_in_seconds": 418.00,
+  "sound_event": "hardcore_discs:triple_the_threat_nongagos"
+}

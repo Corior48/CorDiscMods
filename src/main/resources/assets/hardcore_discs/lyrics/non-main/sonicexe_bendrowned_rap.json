@@ -1,0 +1,11 @@
+{
+  "item": "hardcore_discs:sonicexe_bendrowned_rap",
+  "title": "§0Sonic.EXE vs Ben Drowned",
+  "texture": "non-main/sonicexe_bendrowned_rap",
+  "font": "hardcore_discs:dtm_sans",
+  "lines": [
+    "how the hell do you have access to my discs?",
+    "seriously, this is admin only!",
+    "destroy this cd"
+  ]
+}

@@ -1,0 +1,328 @@
+{
+  "test_disc": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:test_disc",
+        "stream": true
+      }
+    ]
+  },
+  "a_mothers_love": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:wxb/a_mothers_love",
+        "stream": true
+      }
+    ]
+  },
+  "angel_hare_side_a": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:wxb/angel_hare_side_a",
+        "stream": true
+      }
+    ]
+  },
+  "asgore_runs_over_dess": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:wxb/asgore_runs_over_dess",
+        "stream": true
+      }
+    ]
+  },
+  "diggy_diggy_hole": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:wxb/diggy_diggy_hole",
+        "stream": true
+      }
+    ]
+  },
+  "eggman_announcement": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:wxb/eggman_announcement",
+        "stream": true
+      }
+    ]
+  },
+  "dont_mine_at_night": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:wxb/dont_mine_at_night",
+        "stream": true
+      }
+    ]
+  },
+  "gangnam_style": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:wxb/gangnam_style",
+        "stream": true
+      }
+    ]
+  },
+  "jaka_jaan": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:wxb/jaka_jaan",
+        "stream": true
+      }
+    ]
+  },
+  "jaka_jaan_alternative": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:wxb/jaka_jaan_alternative",
+        "stream": true
+      }
+    ]
+  },
+  "kyles_mom": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:wxb/kyles_mom",
+        "stream": true
+      }
+    ]
+  },
+  "never_gonna_give_you_up": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:wxb/never_gonna_give_you_up",
+        "stream": true
+      }
+    ]
+  },
+  "results_and_chill": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:wxb/results_and_chill",
+        "stream": true
+      }
+    ]
+  },
+  "revenge": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:wxb/revenge",
+        "stream": true
+      }
+    ]
+  },
+  "still_alive": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:wxb/still_alive",
+        "stream": true
+      }
+    ]
+  },
+  "summer_tropicala": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:wxb/summer_tropicala",
+        "stream": true
+      }
+    ]
+  },
+  "villager_lullaby": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:wxb/villager_lullaby",
+        "stream": true
+      }
+    ]
+  },
+  "want_you_gone": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:wxb/want_you_gone",
+        "stream": true
+      }
+    ]
+  },
+  "ben_drowned": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:podcasts/ben_drowned",
+        "stream": true
+      }
+    ]
+  },
+  "sexy_luigi": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:non-main/sexy_luigi",
+        "stream": true
+      }
+    ]
+  },
+  "hopes_and_dreams_remaster": {
+    "sounds":[
+      {
+        "name": "hardcore_discs:non-main/hopes_and_dreams_remaster",
+        "stream": true
+      }
+    ]
+  },
+  "fuhuhuhk": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:non-main/fuhuhuhk",
+        "stream": true
+      }
+    ]
+  },
+  "listen_my_way": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:non-main/listen_my_way",
+        "stream": true
+      }
+    ]
+  },
+  "marios_invincible_song": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:non-main/marios_invincible_song",
+        "stream": true
+      }
+    ]
+  },
+  "never_gonna_stop": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:non-main/never_gonna_stop",
+        "stream": true
+      }
+    ]
+  },
+  "only_force_for_me": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:non-main/only_force_for_me",
+        "stream": true
+      }
+    ]
+  },
+  "rambley_kinito_rap": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:non-main/rambley_kinito_rap",
+        "stream": true
+      }
+    ]
+  },
+  "revenge_2": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:non-main/revenge_2",
+        "stream": true
+      }
+    ]
+  },
+  "sonicexe_bendrowned_rap": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:non-main/sonicexe_bendrowned_rap",
+        "stream": true
+      }
+    ]
+  },
+  "story_of_undertale_moti": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:non-main/story_of_undertale_moti",
+        "stream": true
+      }
+    ]
+  },
+  "susie_yuri_rap": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:non-main/susie_yuri_rap",
+        "stream": true
+      }
+    ]
+  },
+  "stronger_daft_speed": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:non-main/stronger_daft_speed",
+        "stream": true
+      }
+    ]
+  },
+  "triple_the_threat_nongagos": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:non-main/triple_the_threat_nongagos",
+        "stream": true
+      }
+    ]
+  },
+  "backbone_remix": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:soundcloud/backbone_remix",
+        "stream": true
+      }
+    ]
+  },
+  "like_father_like_son": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:soundcloud/like_father_like_son",
+        "stream": true
+      }
+    ]
+  },
+  "megalovania_demitale": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:soundcloud/megalovania_demitale",
+        "stream": true
+      }
+    ]
+  },
+  "megalovania_elevator_jazz": {
+    "sounds": [
+      {
+        "name": "hardcore_discs:soundcloud/megalovania_elevator_jazz",
+        "stream": true
+      }
+    ]
+  },
+  "category_open": {
+    "sounds": [
+      "hardcore_discs:sfx/cat_open"
+    ]
+  },
+  "music_block_open": {
+    "sounds": [
+      "hardcore_discs:sfx/music_block_gui_open"
+    ]
+  },
+  "button_highlight": {
+    "sounds": [
+      "hardcore_discs:sfx/button_highlight"
+    ]
+  },
+  "button_press": {
+    "sounds": [
+      "hardcore_discs:sfx/button_press"
+    ]
+  },
+  "error": {
+    "sounds": [
+      "hardcore_discs:sfx/error"
+    ]
+  },
+  "disc_creation": {
+    "sounds": [
+      "hardcore_discs:sfx/disc_created"
+    ]
+  }
+}

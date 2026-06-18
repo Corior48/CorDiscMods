@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.hardcore_discs.eggman_announcement.desc"
+  },
+  "length_in_seconds": 169.00,
+  "sound_event": "hardcore_discs:eggman_announcement"
+}

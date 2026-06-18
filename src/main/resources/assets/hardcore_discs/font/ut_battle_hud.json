@@ -1,0 +1,11 @@
+{
+  "providers": [
+    {
+      "type": "ttf",
+      "file": "hardcore_discs:ut_battle_hud.ttf",
+      "shift": [0, 0],
+      "size": 14,
+      "oversample": 2.0
+    }
+  ]
+}

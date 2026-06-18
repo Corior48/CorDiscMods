@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.hardcore_discs.want_you_gone.desc"
+  },
+  "length_in_seconds": 143.00,
+  "sound_event": "hardcore_discs:want_you_gone"
+}
