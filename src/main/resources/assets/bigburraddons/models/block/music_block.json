@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_top",
+  "textures": {
+    "side": "bigburraddons:block/music_block_side",
+    "top": "bigburraddons:block/music_block_top",
+    "bottom": "bigburraddons:block/music_block_top"
+  }
+}

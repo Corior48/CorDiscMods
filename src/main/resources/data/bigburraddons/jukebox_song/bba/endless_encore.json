@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.bigburraddons.endless_encore.desc"
+  },
+  "length_in_seconds": 156.00,
+  "sound_event": "bigburraddons:endless_encore"
+}

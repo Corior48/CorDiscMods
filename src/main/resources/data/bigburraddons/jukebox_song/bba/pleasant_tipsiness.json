@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.bigburraddons.pleasant_tipsiness.desc"
+  },
+  "length_in_seconds": 97.00,
+  "sound_event": "bigburraddons:pleasant_tipsiness"
+}

@@ -1,0 +1,11 @@
+{
+  "providers": [
+    {
+      "type": "ttf",
+      "file": "bigburraddons:genshin_font.ttf",
+      "shift": [0, 0],
+      "size": 10,
+      "oversample": 2.0
+    }
+  ]
+}

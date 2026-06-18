@@ -1,0 +1,13 @@
+{
+  "item": "bigburraddons:furina_theme",
+  "title": "§0Se Mettre Sur Son Trente-Et-Un !",
+  "texture": "bba/furina_theme",
+  "font": "bigburraddons:genshin_font",
+  "lines":   [
+    "Le monde n'est qu'une scène",
+    "Il vaut mieux rire que pleurer",
+    "Car le rire est le propre de l'homme",
+    "Riez de tout cela, ne vous inquiétez pas",
+    "Profitons d'aujourd'hui"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.bigburraddons.irresistible_force.desc"
+  },
+  "length_in_seconds": 249.00,
+  "sound_event": "bigburraddons:irresistible_force"
+}

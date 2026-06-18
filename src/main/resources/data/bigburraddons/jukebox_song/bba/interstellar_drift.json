@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.bigburraddons.interstellar_drift.desc"
+  },
+  "length_in_seconds": 93.00,
+  "sound_event": "bigburraddons:interstellar_drift"
+}

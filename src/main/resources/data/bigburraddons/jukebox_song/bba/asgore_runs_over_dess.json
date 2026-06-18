@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.bigburraddons.asgore_runs_over_dess.desc"
+  },
+  "length_in_seconds": 155.00,
+  "sound_event": "bigburraddons:asgore_runs_over_dess"
+}

@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.bigburraddons.water_me_down.desc"
+  },
+  "length_in_seconds": 170.00,
+  "sound_event": "bigburraddons:water_me_down"
+}

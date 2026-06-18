@@ -1,0 +1,11 @@
+{
+  "providers": [
+    {
+      "type": "ttf",
+      "file": "bigburraddons:mercy.ttf",
+      "shift": [0, 0],
+      "size": 14,
+      "oversample": 2.0
+    }
+  ]
+}

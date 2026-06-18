@@ -1,0 +1,344 @@
+{
+  "test_disc": {
+    "sounds": [
+      {
+        "name": "bigburraddons:test_disc",
+        "stream": true
+      }
+    ]
+  },
+    "angel_hare_side_a": {
+      "sounds": [
+        {
+          "name": "bigburraddons:discs/angel_hare_side_a",
+          "stream": true
+        }
+      ]
+    },
+    "oh_despair": {
+      "sounds": [
+        {
+          "name": "bigburraddons:discs/oh_despair",
+          "stream": true
+        }
+      ]
+    },
+  "villager_lullaby": {
+    "sounds": [
+      {
+        "name": "bigburraddons:discs/villager_lullaby",
+        "stream": true
+      }
+    ]
+  },
+  "megalovania_1": {
+    "sounds": [
+      {
+        "name": "bigburraddons:discs/megalovania_1",
+        "stream": true
+      }
+    ]
+  },
+  "jaka_jaan": {
+    "sounds":[
+      {
+        "name": "bigburraddons:discs/jaka_jaan",
+        "stream": true
+      }
+    ]
+  },
+  "jaka_jaan_alternative": {
+    "sounds": [
+      {
+        "name": "bigburraddons:discs/jaka_jaan_alternative",
+        "stream": true
+      }
+    ]
+  },
+  "among_us_remix": {
+    "sounds": [
+      {
+        "name": "bigburraddons:discs/among_us_remix",
+        "stream": true
+      }
+    ]
+  },
+  "gangnam_style": {
+    "sounds": [
+      {
+        "name": "bigburraddons:discs/gangnam_style",
+        "stream": true
+      }
+    ]
+  },
+  "a_mothers_love": {
+    "sounds": [
+      {
+        "name": "bigburraddons:discs/a_mothers_love",
+        "stream": true
+      }
+    ]
+  },
+  "endless_encore": {
+    "sounds": [
+      {
+      "name": "bigburraddons:discs/endless_encore",
+      "stream": true
+      }
+    ]
+  },
+  "blazing_heart": {
+    "sounds": [
+      {
+      "name": "bigburraddons:discs/blazing_heart",
+      "stream": true
+      }
+    ]
+  },
+  "disco_eggmans_announcement": {
+    "sounds": [
+      {
+      "name": "bigburraddons:discs/disco_eggmans_announcement",
+      "stream": true
+     }
+    ]
+  },
+  "dont_mine_at_night": {
+    "sounds": [
+      {
+      "name": "bigburraddons:discs/dont_mine_at_night",
+      "stream": true
+      }
+    ]
+  },
+  "emberfire": {
+    "sounds": [
+      {
+      "name": "bigburraddons:discs/emberfire",
+      "stream": true
+      }
+    ]
+  },
+  "furina_theme": {
+    "sounds": [
+      {
+      "name": "bigburraddons:discs/furina_theme",
+      "stream": true
+      }
+    ]
+  },
+  "kyles_mom": {
+    "sounds": [
+      {
+      "name": "bigburraddons:discs/kyles_mom",
+      "stream": true
+      }
+    ]
+  },
+  "majin_forest_escape": {
+    "sounds": [
+      {
+      "name": "bigburraddons:discs/majin_forest_escape",
+      "stream": true
+      }
+    ]
+  },
+  "never_gonna_give_you_up":{
+    "sounds": [
+      {
+      "name": "bigburraddons:discs/never_gonna_give_you_up",
+      "stream": true
+      }
+    ]
+  },
+  "results_and_chill": {
+   "sounds": [
+     {
+     "name": "bigburraddons:discs/results_and_chill",
+     "stream": true
+    }
+   ]
+  },
+  "still_alive": {
+    "sounds": [
+      {
+      "name": "bigburraddons:discs/still_alive",
+      "stream": true
+      }
+    ]
+  },
+  "want_you_gone": {
+    "sounds": [
+      {
+      "name": "bigburraddons:discs/want_you_gone",
+      "stream": true
+      }
+    ]
+  },
+  "water_me_down": {
+    "sounds": [
+      {
+      "name": "bigburraddons:discs/water_me_down",
+      "stream": true
+      }
+    ]
+  },
+  "among_us_lofi": {
+    "sounds": [
+      {
+        "name": "bigburraddons:discs/among_us_lofi",
+        "stream": true
+      }
+    ]
+  },
+  "vs_sonic_exe_rerun": {
+    "sounds": [
+      {
+        "name": "bigburraddons:discs/vs_sonic_exe_rerun",
+        "stream": true
+      }
+    ]
+  },
+  "god_devouring_mania": {
+    "sounds": [
+      {
+        "name": "bigburraddons:discs/god_devouring_mania",
+        "stream": true
+      }
+    ]
+  },
+  "interstellar_drift": {
+    "sounds": [
+      {
+        "name": "bigburraddons:discs/interstellar_drift",
+        "stream": true
+      }
+    ]
+  },
+  "irresistible_force": {
+    "sounds": [
+      {
+        "name": "bigburraddons:discs/irresistible_force",
+        "stream": true
+      }
+    ]
+  },
+  "kitchen_gun": {
+    "sounds": [
+      {
+        "name": "bigburraddons:discs/kitchen_gun",
+        "stream": true
+      }
+    ]
+  },
+  "la_vaguelette": {
+    "sounds": [
+      {
+        "name": "bigburraddons:discs/la_vaguelette",
+        "stream": true
+      }
+    ]
+  },
+  "pleasant_tipsiness": {
+    "sounds": [
+      {
+        "name": "bigburraddons:discs/pleasant_tipsiness",
+        "stream": true
+      }
+    ]
+  },
+  "polumnia_omnia": {
+    "sounds": [
+      {
+        "name": "bigburraddons:discs/polumnia_omnia",
+        "stream": true
+      }
+    ]
+  },
+  "tar_tar_taglia": {
+    "sounds": [
+      {
+        "name": "bigburraddons:discs/tar_tar_taglia",
+        "stream": true
+      }
+    ]
+  },
+  "asgore_runs_over_dess": {
+  "sounds": [
+    {
+      "name": "bigburraddons:discs/asgore_runs_over_dess",
+      "stream": true
+    }
+  ]
+},
+  "nod_krai": {
+    "sounds": [
+      {
+        "name": "bigburraddons:discs/nod_krai",
+        "stream": true
+      }
+    ]
+  },
+  "summer_tropicala": {
+    "sounds": [
+      {
+        "name": "bigburraddons:discs/summer_tropicala",
+        "stream": true
+      }
+    ]
+  },
+  "diggy_diggy_hole": {
+    "sounds": [
+      {
+        "name": "bigburraddons:discs/diggy_diggy_hole",
+        "stream": true
+      }
+    ]
+  },
+  "house_of_mirrors": {
+    "sounds": [
+      {
+        "name": "bigburraddons:discs/house_of_mirrors",
+        "stream": true
+      }
+    ]
+  },
+  "revenge": {
+    "sounds": [
+      {
+        "name": "bigburraddons:discs/revenge",
+        "stream": true
+      }
+    ]
+  },
+  "category_open": {
+    "sounds": [
+      "bigburraddons:sfx/cat_open"
+    ]
+  },
+  "music_block_open": {
+    "sounds": [
+      "bigburraddons:sfx/music_block_gui_open"
+    ]
+  },
+  "button_highlight": {
+    "sounds": [
+      "bigburraddons:sfx/button_highlight"
+    ]
+  },
+  "button_press": {
+    "sounds": [
+      "bigburraddons:sfx/button_press"
+    ]
+  },
+  "error": {
+    "sounds": [
+      "bigburraddons:sfx/error"
+    ]
+  },
+  "disc_creation": {
+    "sounds": [
+      "bigburraddons:sfx/disc_created"
+    ]
+  }
+}

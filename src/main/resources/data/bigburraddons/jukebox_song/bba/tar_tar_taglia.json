@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.bigburraddons.tar_tar_taglia.desc"
+  },
+  "length_in_seconds": 70.00,
+  "sound_event": "bigburraddons:tar_tar_taglia"
+}

@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.bigburraddons.diggy_diggy_hole.desc"
+  },
+  "length_in_seconds": 249.00,
+  "sound_event": "bigburraddons:diggy_diggy_hole"
+}
