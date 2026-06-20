@@ -21,6 +21,10 @@ public final class DiscCatalog {
         PODCASTS("Podcasts"),
         SOUNDCLOUD("Soundcloud"),
         WATERFALL_X_BAILEY("Waterfall x Bailey"),
+        ALEX_MOBS("Alex's Mobs"),
+        APOTHIC_ENCHANTING("Apothic Enchanting"),
+        QUARK("Quark"),
+        SUPPLEMENTARIES("Supplementaries"),
         THE_AETHER("The Aether"),
         TWILIGHT_FOREST("Twilight Forest"),
         CREATE("Create");
@@ -235,6 +239,25 @@ public final class DiscCatalog {
         addOptional(discs, "aether:music_disc_aether_tune", DiscCategory.THE_AETHER, "Noisestorm - Aether Tune",10);
         addOptional(discs, "aether:music_disc_ascending_dawn", DiscCategory.THE_AETHER, "Emile van Krieken - Ascending Dawn",10);
         addOptional(discs, "aether:music_disc_sliders_wrath", DiscCategory.THE_AETHER, "sunsette - Slider's Wrath",10);
+
+        addOptional(discs, "alexsmobs:music_disc_thime", DiscCategory.ALEX_MOBS, "Thime - Enderiophage", 10);
+        addOptional(discs, "alexsmobs:music_disc_daze", DiscCategory.ALEX_MOBS, "Daze - Mimic Octopus", 10);
+
+        addOptional(discs, "apothic_enchanting:music_disc_eterna", DiscCategory.APOTHIC_ENCHANTING,"Firel - Eterna", 10);
+        addOptional(discs, "apothic_enchanting:music_disc_quanta", DiscCategory.APOTHIC_ENCHANTING,"Firel - Quanta", 10);
+        addOptional(discs, "apothic_enchanting:music_disc_arcana", DiscCategory.APOTHIC_ENCHANTING,"Firel - Arcana", 10);
+
+        addOptional(discs, "quark:music_disc_drips", DiscCategory.QUARK, null, 10);
+        addOptional(discs, "quark:music_disc_ocean", DiscCategory.QUARK, null, 10);
+        addOptional(discs, "quark:music_disc_rainbow", DiscCategory.QUARK, null, 10);
+        addOptional(discs, "quark:music_disc_wind", DiscCategory.QUARK, null, 10);
+        addOptional(discs, "quark:music_disc_fire", DiscCategory.QUARK, null, 10);
+        addOptional(discs, "quark:music_disc_clock", DiscCategory.QUARK, null, 10);
+        addOptional(discs, "quark:music_disc_crickets", DiscCategory.QUARK, null, 10);
+        addOptional(discs, "quark:music_disc_chatter", DiscCategory.QUARK, null, 10);
+        addOptional(discs, "quark:music_disc_endermosh", DiscCategory.QUARK, null, 10);
+
+        addOptional(discs, "supplementaries:music_disc_heave_ho", DiscCategory.SUPPLEMENTARIES, "Hlzfss - Heave Ho!", 10);
 
         addOptional(discs, "twilightforest:music_disc_thread", DiscCategory.TWILIGHT_FOREST, "MrCompost - Thread",10);
         addOptional(discs, "twilightforest:music_disc_findings", DiscCategory.TWILIGHT_FOREST, "MrCompost - Findings",10);

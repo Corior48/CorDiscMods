@@ -12,6 +12,7 @@ import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
 
@@ -68,6 +69,54 @@ public class MusicBlockScreen extends AbstractContainerScreen<MusicBlockMenu> {
                     "textures/gui/cat-tabs/name-id-selected.png"
             );
 
+    public static final ResourceLocation PAGE_TAB_BASE_TEXTURE =
+            ResourceLocation.fromNamespaceAndPath(
+                    HardcoreDiscs.MODID,
+                    "textures/gui/cat-tabs/page-button/base-tab.png"
+            );
+
+    public static final ResourceLocation PAGE_TAB_NEXT_BASE =
+            ResourceLocation.fromNamespaceAndPath(
+                    HardcoreDiscs.MODID,
+                    "textures/gui/cat-tabs/page-button/arrows/next_base.png"
+            );
+
+    public static final ResourceLocation PAGE_TAB_NEXT_HIGHLIGHT =
+            ResourceLocation.fromNamespaceAndPath(
+                    HardcoreDiscs.MODID,
+                    "textures/gui/cat-tabs/page-button/arrows/next_highlighted.png"
+            );
+
+    public static final ResourceLocation PAGE_TAB_PREV_BASE =
+            ResourceLocation.fromNamespaceAndPath(
+                    HardcoreDiscs.MODID,
+                    "textures/gui/cat-tabs/page-button/arrows/previous_base.png"
+            );
+
+    public static final ResourceLocation PAGE_TAB_PREV_HIGHLIGHT =
+            ResourceLocation.fromNamespaceAndPath(
+                    HardcoreDiscs.MODID,
+                    "textures/gui/cat-tabs/page-button/arrows/previous_highlighted.png"
+            );
+
+    public static final ResourceLocation TOTAL_PAGE_COUNT =
+            ResourceLocation.fromNamespaceAndPath(
+                    HardcoreDiscs.MODID,
+                    "textures/gui/cat-tabs/page-button/numbers/total.png"
+            );
+
+    public static final ResourceLocation CAT_PAGE_1 =
+            ResourceLocation.fromNamespaceAndPath(
+                    HardcoreDiscs.MODID,
+                    "textures/gui/cat-tabs/page-button/numbers/page1.png"
+            );
+
+    public static final ResourceLocation CAT_PAGE_2 =
+            ResourceLocation.fromNamespaceAndPath(
+                    HardcoreDiscs.MODID,
+                    "textures/gui/cat-tabs/page-button/numbers/page2.png"
+            );
+
     private static final String CATEGORY_BASE_PATH =
             "textures/gui/cat-tabs/base-buttons/";
 
@@ -85,6 +134,7 @@ public class MusicBlockScreen extends AbstractContainerScreen<MusicBlockMenu> {
 
     private static boolean skipNextOpenSound = false;
     private boolean wasCategoryHovered = false;
+    private boolean wasPageArrowHovered = false;
     private boolean returnedFromLyrics = false;
     private final boolean playOpenSound;
 
@@ -141,6 +191,33 @@ public class MusicBlockScreen extends AbstractContainerScreen<MusicBlockMenu> {
     private static final int XP_BOX_Y = 52;
     private static final int XP_BOX_FULL_WIDTH = 48;
     private static final int XP_BOX_HEIGHT = 11;
+
+    private int categoryPage = 0;
+    private static final int MAX_CATEGORY_PAGE = 1;
+
+    private static final int PAGE_TAB_WIDTH = 97;
+    private static final int PAGE_TAB_HEIGHT = 14;
+
+    private static final int PAGE_ARROW_WIDTH = 8;
+    private static final int PAGE_ARROW_HEIGHT = 8;
+
+    private static final int PAGE_PREV_X = 4;
+    private static final int PAGE_ARROW_Y = 2;
+    private static final int PAGE_NEXT_X = 85;
+
+    private static final int CATEGORIES_PER_PAGE = 10;
+
+    private static final int PAGE_TAB_X = 4;
+    private static final int PAGE_TAB_Y = 183;
+
+    private static final int PAGE_NUMBER_Y = 1;
+    private static final int PAGE_CURRENT_NUMBER_X = 40;
+    private static final int PAGE_TOTAL_NUMBER_X = 47;
+
+    private static final int PAGE_CURRENT_NUMBER_WIDTH = 6;
+    private static final int PAGE_CURRENT_NUMBER_HEIGHT = 9;
+    private static final int PAGE_TOTAL_NUMBER_WIDTH = 13;
+    private static final int PAGE_TOTAL_NUMBER_HEIGHT = 10;
 
     private static final int CATEGORY_DRAWER_WIDTH = 102;
     private static final int CATEGORY_DRAWER_HEIGHT = 185;
@@ -684,7 +761,13 @@ public class MusicBlockScreen extends AbstractContainerScreen<MusicBlockMenu> {
         return mouseX >= x && mouseX < x + width && mouseY >= y && mouseY < y + height;
     }
 
-    private void renderCategoryNames(GuiGraphics guiGraphics, int screenX, int screenY, int mouseX, int mouseY) {
+    private void renderCategoryNames(
+            GuiGraphics guiGraphics,
+            int screenX,
+            int screenY,
+            int mouseX,
+            int mouseY
+    ) {
         int localMouseX = mouseX - this.leftPos;
         int localMouseY = mouseY - this.topPos;
 
@@ -693,7 +776,17 @@ public class MusicBlockScreen extends AbstractContainerScreen<MusicBlockMenu> {
 
         boolean anyCategoryHovered = false;
 
-        for (DiscCatalog.DiscCategory category : DiscCatalog.getAvailableCategories()) {
+        List<DiscCatalog.DiscCategory> categories = DiscCatalog.getAvailableCategories();
+
+        int maxPage = Math.max(0, (categories.size() - 1) / CATEGORIES_PER_PAGE);
+        categoryPage = Math.max(0, Math.min(categoryPage, maxPage));
+
+        int start = categoryPage * CATEGORIES_PER_PAGE;
+        int end = Math.min(start + CATEGORIES_PER_PAGE, categories.size());
+
+        for (int i = start; i < end; i++) {
+            DiscCatalog.DiscCategory category = categories.get(i);
+
             boolean hovered = isInside(
                     localMouseX,
                     localMouseY,
@@ -721,8 +814,6 @@ public class MusicBlockScreen extends AbstractContainerScreen<MusicBlockMenu> {
                     CATEGORY_BUTTON_HEIGHT
             );
 
-            y += CATEGORY_BUTTON_GAP;
-
             if ((selected || hovered) && !lyricsButtonHovered) {
                 ResourceLocation iconTexture = selected
                         ? CATEGORY_ICON_SELECTED_TEXTURE
@@ -731,7 +822,7 @@ public class MusicBlockScreen extends AbstractContainerScreen<MusicBlockMenu> {
                 guiGraphics.blit(
                         iconTexture,
                         screenX + CATEGORY_ICON_X_OFFSET,
-                        this.topPos + y + CATEGORY_ICON_Y_OFFSET,
+                        this.topPos + y + CATEGORY_ICON_Y_OFFSET + CATEGORY_BUTTON_GAP,
                         0,
                         0,
                         CATEGORY_ICON_SIZE,
@@ -740,13 +831,19 @@ public class MusicBlockScreen extends AbstractContainerScreen<MusicBlockMenu> {
                         CATEGORY_ICON_SIZE
                 );
             }
+
+            y += CATEGORY_BUTTON_GAP;
         }
+
+        if (maxPage > 0) {
+            renderCategoryPageTab(guiGraphics, screenX, mouseX, mouseY, maxPage);
+        }
+
         if (anyCategoryHovered && !wasCategoryHovered) {
             playUiSound(ModSounds.BUTTON_HIGHLIGHT.get(), 1.0F, 1.0F);
         }
 
         wasCategoryHovered = anyCategoryHovered;
-
     }
 
     private boolean handleCategoryDrawerClick(int mouseX, int mouseY) {
@@ -789,7 +886,7 @@ public class MusicBlockScreen extends AbstractContainerScreen<MusicBlockMenu> {
                 CATEGORY_DRAWER_OPEN_X,
                 CATEGORY_DRAWER_Y,
                 CATEGORY_DRAWER_WIDTH,
-                CATEGORY_DRAWER_HEIGHT
+                CATEGORY_DRAWER_HEIGHT + PAGE_TAB_HEIGHT
         )) {
             return handleCategoryNameClick(mouseX, mouseY, CATEGORY_DRAWER_OPEN_X);
         }
@@ -798,9 +895,57 @@ public class MusicBlockScreen extends AbstractContainerScreen<MusicBlockMenu> {
     }
 
     private boolean handleCategoryNameClick(int mouseX, int mouseY, int drawerX) {
+        List<DiscCatalog.DiscCategory> categories = DiscCatalog.getAvailableCategories();
+
+        int maxPage = Math.max(0, (categories.size() - 1) / CATEGORIES_PER_PAGE);
+
+        if (maxPage > 0) {
+            int tabX = drawerX + PAGE_TAB_X;
+            int tabY = CATEGORY_DRAWER_Y + PAGE_TAB_Y;
+
+            if (isInside(
+                    mouseX,
+                    mouseY,
+                    tabX + PAGE_PREV_X,
+                    tabY + PAGE_ARROW_Y,
+                    PAGE_ARROW_WIDTH,
+                    PAGE_ARROW_HEIGHT
+            )) {
+                if (categoryPage > 0) {
+                    categoryPage--;
+                    playUiSound(ModSounds.CATEGORY_OPEN.get(), 1.0F, 1.0F);
+                } else {
+                    playUiSound(ModSounds.ERROR.get(), 1.0F, 1.0F);
+                }
+                return true;
+            }
+
+            if (isInside(
+                    mouseX,
+                    mouseY,
+                    tabX + PAGE_NEXT_X,
+                    tabY + PAGE_ARROW_Y,
+                    PAGE_ARROW_WIDTH,
+                    PAGE_ARROW_HEIGHT
+            )) {
+                if (categoryPage < maxPage) {
+                    categoryPage++;
+                    playUiSound(ModSounds.CATEGORY_OPEN.get(), 1.0F, 1.0F);
+                } else {
+                    playUiSound(ModSounds.ERROR.get(), 1.0F, 1.0F);
+                }
+                return true;
+            }
+        }
+
         int y = CATEGORY_DRAWER_Y + CATEGORY_BUTTON_Y_START;
 
-        for (DiscCatalog.DiscCategory category : DiscCatalog.getAvailableCategories()) {
+        int start = categoryPage * CATEGORIES_PER_PAGE;
+        int end = Math.min(start + CATEGORIES_PER_PAGE, categories.size());
+
+        for (int i = start; i < end; i++) {
+            DiscCatalog.DiscCategory category = categories.get(i);
+
             if (isInside(
                     mouseX,
                     mouseY,
@@ -810,6 +955,7 @@ public class MusicBlockScreen extends AbstractContainerScreen<MusicBlockMenu> {
                     CATEGORY_BUTTON_HEIGHT
             )) {
                 playUiSound(ModSounds.BUTTON_PRESS.get(), 1.0F, 1.0F);
+
                 activeCategory = category;
                 refreshVisibleDiscs();
 
@@ -870,6 +1016,7 @@ public class MusicBlockScreen extends AbstractContainerScreen<MusicBlockMenu> {
 
     private void renderCategoryDrawer(GuiGraphics guiGraphics, int mouseX, int mouseY) {
         if (!categoryOpen) {
+            wasPageArrowHovered = false;
             guiGraphics.blit(
                     CATEGORY_DRAWER_CLOSED_TEXTURE,
                     this.leftPos + CATEGORY_DRAWER_CLOSED_X,
@@ -902,6 +1049,113 @@ public class MusicBlockScreen extends AbstractContainerScreen<MusicBlockMenu> {
         renderCategoryNames(guiGraphics, screenX, screenY, mouseX, mouseY);
     }
 
+    private void renderCategoryPageTab(
+            GuiGraphics guiGraphics,
+            int screenX,
+            int mouseX,
+            int mouseY,
+            int maxPage
+    ) {
+        int localMouseX = mouseX - this.leftPos;
+        int localMouseY = mouseY - this.topPos;
+
+        int tabLocalX = CATEGORY_DRAWER_OPEN_X + PAGE_TAB_X;
+        int tabLocalY = CATEGORY_DRAWER_Y + PAGE_TAB_Y;
+
+        int tabScreenX = screenX + PAGE_TAB_X;
+        int tabScreenY = this.topPos + tabLocalY;
+
+        boolean hoveringPrev = isInside(
+                localMouseX,
+                localMouseY,
+                tabLocalX + PAGE_PREV_X,
+                tabLocalY + PAGE_ARROW_Y,
+                PAGE_ARROW_WIDTH,
+                PAGE_ARROW_HEIGHT
+        );
+
+        boolean hoveringNext = isInside(
+                localMouseX,
+                localMouseY,
+                tabLocalX + PAGE_NEXT_X,
+                tabLocalY + PAGE_ARROW_Y,
+                PAGE_ARROW_WIDTH,
+                PAGE_ARROW_HEIGHT
+        );
+
+        boolean anyPageArrowHovered = hoveringPrev || hoveringNext;
+
+        if (anyPageArrowHovered && !wasPageArrowHovered) {
+            playUiSound(ModSounds.BUTTON_HIGHLIGHT.get(), 1.0F, 1.0F);
+        }
+
+        wasPageArrowHovered = anyPageArrowHovered;
+
+        guiGraphics.blit(
+                PAGE_TAB_BASE_TEXTURE,
+                tabScreenX,
+                tabScreenY,
+                0,
+                0,
+                PAGE_TAB_WIDTH,
+                PAGE_TAB_HEIGHT,
+                PAGE_TAB_WIDTH,
+                PAGE_TAB_HEIGHT
+        );
+
+        guiGraphics.blit(
+                hoveringPrev ? PAGE_TAB_PREV_HIGHLIGHT : PAGE_TAB_PREV_BASE,
+                tabScreenX + PAGE_PREV_X,
+                tabScreenY + PAGE_ARROW_Y,
+                0,
+                0,
+                PAGE_ARROW_WIDTH,
+                PAGE_ARROW_HEIGHT,
+                PAGE_ARROW_WIDTH,
+                PAGE_ARROW_HEIGHT
+        );
+
+        guiGraphics.blit(
+                hoveringNext ? PAGE_TAB_NEXT_HIGHLIGHT : PAGE_TAB_NEXT_BASE,
+                tabScreenX + PAGE_NEXT_X,
+                tabScreenY + PAGE_ARROW_Y,
+                0,
+                0,
+                PAGE_ARROW_WIDTH,
+                PAGE_ARROW_HEIGHT,
+                PAGE_ARROW_WIDTH,
+                PAGE_ARROW_HEIGHT
+        );
+
+        ResourceLocation currentPageTexture = categoryPage == 0
+                ? CAT_PAGE_1
+                : CAT_PAGE_2;
+
+        guiGraphics.blit(
+                currentPageTexture,
+                tabScreenX + PAGE_CURRENT_NUMBER_X,
+                tabScreenY + PAGE_NUMBER_Y,
+                0,
+                0,
+                PAGE_CURRENT_NUMBER_WIDTH,
+                PAGE_CURRENT_NUMBER_HEIGHT,
+                PAGE_CURRENT_NUMBER_WIDTH,
+                PAGE_CURRENT_NUMBER_HEIGHT
+        );
+
+        guiGraphics.blit(
+                TOTAL_PAGE_COUNT,
+                tabScreenX + PAGE_TOTAL_NUMBER_X,
+                tabScreenY + PAGE_NUMBER_Y,
+                0,
+                0,
+                PAGE_TOTAL_NUMBER_WIDTH,
+                PAGE_TOTAL_NUMBER_HEIGHT,
+                PAGE_TOTAL_NUMBER_WIDTH,
+                PAGE_TOTAL_NUMBER_HEIGHT
+        );
+    }
+
     private ResourceLocation getCategoryButtonTexture(
             DiscCatalog.DiscCategory category,
             boolean hovered,
@@ -910,8 +1164,8 @@ public class MusicBlockScreen extends AbstractContainerScreen<MusicBlockMenu> {
         String folder = selected
                 ? CATEGORY_SELECTED_PATH
                 : hovered
-                ? CATEGORY_HIGHLIGHT_PATH
-                : CATEGORY_BASE_PATH;
+                  ? CATEGORY_HIGHLIGHT_PATH
+                  : CATEGORY_BASE_PATH;
 
         String fileName = category.name().toLowerCase(Locale.ROOT);
 
