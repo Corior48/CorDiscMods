@@ -10,6 +10,7 @@ Both mods will have their own releases for their respective versions! Which you'
 Each release will be labeled by the following:
 
 BigBurrAddons Mod = Big Burr Addons
+
 Hardcore Additions Mod = Cor's Hardcore Additions
 
 with what version number release following directly afterwards!
