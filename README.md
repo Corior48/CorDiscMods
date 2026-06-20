@@ -1,3 +1,7 @@
+<div align="center">
+<img width="250" height="250" alt="ChibiMattFloatRedux" src="https://github.com/user-attachments/assets/2ea3ac80-3fb7-4c76-913d-f52183d72e05" />
+
+
 # Corior's Disc Mod's Repository!
 Howdy! the current branch you are looking at will NOT show any code, infact, this README.md is the only file you'll actually see!
 
@@ -14,4 +18,5 @@ BigBurrAddons Mod = Big Burr Addons
 Hardcore Additions Mod = Cor's Hardcore Additions
 
 with what version number release following directly afterwards!
-(EXAMPLE: Cor's Hardcore Additions v1.0.0 or Waterfall x Bailey v1.1.0)
+(EXAMPLE: Cor's Hardcore Additions v1.0.0 or BigBurrAddons v1.0.0)
+</div>
